@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+    <TextView
+        android:id="@+id/dummy1_onboarding"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tv_skip_onboarding"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/dummy2_onboarding"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="24"
+        app:layout_constraintTop_toBottomOf="@id/tv_skip_onboarding"
+        app:layout_constraintBottom_toTopOf="@id/vp_viewpager_onboarding"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/dummy3_onboarding"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="10"
+        app:layout_constraintBottom_toTopOf="@id/tv_select_button_onboarding"
+        app:layout_constraintTop_toBottomOf="@id/indicator_onboarding"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/dummy4_onboarding"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="24"
+        app:layout_constraintTop_toBottomOf="@id/tv_select_button_onboarding"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/tv_skip_onboarding"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="건너뛰기"
+        android:textSize="20sp"
+        android:letterSpacing="0.11"
+        android:lineSpacingExtra="3.7sp"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintVertical_weight="18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dummy1_onboarding"
+        app:layout_constraintBottom_toTopOf="@id/dummy2_onboarding"
+        android:layout_marginRight="24dp"/>
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vp_viewpager_onboarding"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="horizontal"
+        app:layout_constraintVertical_weight="326"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dummy2_onboarding"
+        app:layout_constraintBottom_toTopOf="@id/indicator_onboarding"/>
+
+    <me.relex.circleindicator.CircleIndicator3
+        android:id="@+id/indicator_onboarding"
+        app:ci_drawable="@drawable/indicator_clicked"
+        app:ci_drawable_unselected="@drawable/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom"
+        app:ci_margin="10dp"
+        app:ci_width="5dp"
+        app:layout_constraintVertical_weight="50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vp_viewpager_onboarding"
+        app:layout_constraintBottom_toTopOf="@id/dummy3_onboarding"/>
+
+    <TextView
+        android:id="@+id/tv_select_button_onboarding"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/save_button_effect"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:text="다음"
+        android:textColor="@drawable/save_button_text_color"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"
+        android:letterSpacing="0.01"
+        android:lineSpacingExtra="4.8sp"
+        app:layout_constraintVertical_weight="50"
+        app:layout_constraintTop_toBottomOf="@id/dummy3_onboarding"
+        app:layout_constraintBottom_toTopOf="@id/dummy4_onboarding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
